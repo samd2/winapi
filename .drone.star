@@ -14,7 +14,7 @@ windowsglobalimage="cppalliance/dronevs2019"
 
 def main(ctx):
   return [
-  linux_cxx("COMMENT=c++03 gcc-4.8 TOOLSET=gcc COMPILER= Job 0", "g++", packages="", buildtype="boost", image=linuxglobalimage, environment={'COMMENT': 'c++03 gcc-4.8', 'TOOLSET': 'gcc', 'COMPILER': 'g++', 'CXXSTD': 'c++03', 'DRONE_JOB_UUID': 'b6589fc6ab'}, globalenv=globalenv),
+  linux_cxx("COMMENT=c++03 gcc-4.8 TOOLSET=gcc COMPILER= Job 0", "g++", packages="", buildtype="boost", buildscript="drone", image=linuxglobalimage, environment={'COMMENT': 'c++03 gcc-4.8', 'TOOLSET': 'gcc', 'COMPILER': 'g++', 'CXXSTD': 'c++03', 'DRONE_JOB_UUID': 'b6589fc6ab'}, globalenv=globalenv),
   ]
 
 # from https://github.com/boostorg/boost-ci
