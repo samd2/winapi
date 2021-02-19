@@ -158,6 +158,6 @@ jobs:
 
           echo '==================================> AFTER_SUCCESS'
 
-          . $GITHUB_WORKSPACE/.github/scripts/after-success-gha.sh
+          . $GITHUB_WORKSPACE/.github/scripts/after-success.sh
 
           fi
