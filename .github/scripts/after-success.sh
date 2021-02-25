@@ -13,7 +13,7 @@ if [ "$JOB_UUID" = "b6589fc6ab" ] ; then
     $LCOV --directory bin.v2/libs/$SELF --base-directory libs/$SELF --capture --output-file $TRAVIS_BUILD_DIR/coverals/coverage.info --no-external
     $LCOV --remove $TRAVIS_BUILD_DIR/coverals/coverage.info "*/$SELF/test/*" --output-file $TRAVIS_BUILD_DIR/coverals/coverage-filtered.info
     cd $TRAVIS_BUILD_DIR
-    gem install coveralls-lcov || echo "ERROR. Failed to install coveralls-lcov"
+    sudo gem install coveralls-lcov || echo "ERROR. Failed to install coveralls-lcov"
     coveralls-lcov coverals/coverage-filtered.info
 fi
 
